@@ -20,17 +20,16 @@ class App extends Component {
         this.setState({ renderBall: true });
     }
 
-    handleKeyDown(event) {
-        if (event.key === "ArrowRight") {
-            this.setState(prevState => ({
-                posi: prevState.posi + 10,
-                ballPosition: {
-                    left: `${prevState.posi + 10}px`
-                }
-            }));
-        }
+handleKeyDown(event) {
+    if (event.key === "ArrowRight") {
+        this.setState(prevState => ({
+            posi: prevState.posi + 5,
+            ballPosition: {
+                left: `${prevState.posi + 5}px`
+            }
+        }));
     }
-
+}
     renderBallOrButton() {
         if (this.state.renderBall) {
             return (
